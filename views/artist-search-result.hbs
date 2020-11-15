@@ -1,5 +1,14 @@
-{{#each artists}}
-<p>{{name}}</p>
-<img src="{{images.0.url}}" alt="">
-<a href="/albums/{{id}}">View Albums</a>
-{{/each}}
+<div class="search-results">
+    {{#each artists}}
+
+    <div class="card" style="width: 18rem;">
+        <img src="{{images.0.url}}" class="card-img-top" alt="Artist's picture">
+        <div class="card-body">
+            <h5 class="card-title">{{name}}</h5>
+        </div>
+        <div class="card-body">
+            <a href="/albums/{{id}}" class="card-link btn btn-info">View Albums</a>
+        </div>
+    </div>
+    {{/each}}
+</div>
